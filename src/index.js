@@ -8,7 +8,6 @@ const Picker = () => {
   const Color = (props) => {
     function ifSelected() {
       if (props.color === selectedColor) {
-        console.log(selectedColor);
         return true;
       } else {
         return false;
