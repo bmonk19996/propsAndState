@@ -2,13 +2,25 @@ import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 
 // write your Color component here
+const Picker = () => {
+const [selectedColor,setSelectedColor] = useState('')
+
 const Color = (props) => {
+
+  function ifSelected(){
+    if(props.color===selectedColor){
+      return true
+    } 
+    else{
+      return false
+    }
+  }
+  
   return (
     <div className={props.color} onClick={() =>props.changeColor(props.color)}/>
   )
 }
-const Picker = () => {
-const [selectedColor,setSelectedColor] = useState('')
+
 function changeColor(color) {
   setSelectedColor(color)
 }
